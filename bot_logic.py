@@ -5,7 +5,7 @@ import telebot
 from upstash_redis import Redis
 
 # ====== Config ======
-TOKEN = "8122957124:AAEPoyWZ0cUyOkoV34RhGmhkGrffQY0dQQk"
+TOKEN = os.environ["BOT_TOKEN"]           # do BotFather
 bot = telebot.TeleBot(TOKEN, threaded=False)  # sem threads em serverless
 
 # ====== Persistência (Upstash Redis) ======
